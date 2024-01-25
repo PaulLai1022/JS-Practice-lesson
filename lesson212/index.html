@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .pinkBorder {
+            outline: 1px solid pink;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <input type='text' class='input' placeholder="信箱/ID/手機密碼">
+
+    <script>
+        var input = document.getElementsByClassName('input');
+
+        input[0].onfocus = function () {
+            input[0].placeholder = ' ';
+            input[0].classList.add('pinkBorder');
+        }
+
+        input[0].onblur = function () {
+            if (input[0].placeholder == '') {
+                input[0].placeholder = '信箱/ID/手機密碼';
+                input[0].classList.remove('pinkBorder');
+            }
+        }
+    </script>
 </body>
 </html>
