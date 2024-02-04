@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 100px auto; 
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div class = 'wrap'>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type = checkbox id = checkAll>
+                    </th>
+                    <th>商品</th>
+                    <th>價錢</th>
+                </tr>
+            </thead>
+            <tbody id = small>
+                <tr>
+                    <td>
+                        <input type = checkbox>
+                    </td>
+                    <td>iPhone</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = checkbox>
+                    </td>
+                    <td>iPhone2</td>
+                    <td>10000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = checkbox>
+                    </td>
+                    <td>iPhone3</td>
+                    <td>12000</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        var selectAll = document.getElementById('checkAll');
+        var smallSelect = document.getElementById('small').getElementsByTagName('input');
+
+        selectAll.onclick = function(){
+            for(var i =0; i< smallSelect.length; i++){
+                smallSelect[i].checked = this.checked; 
+            }
+        }
+
+       
+
+        for(var i = 0; i<smallSelect.length; i++){
+            smallSelect[i].onclick = function() {
+                var bool = true; 
+
+                for(var i =0; i<smallSelect.length; i++){
+                    if(!smallSelect[i].checked){
+                        bool = false;
+                        break;
+                    }
+                }
+                selectAll.checked = flag; 
+            }
+
+        }
+     
+    </script>
+</body>
+</html> 

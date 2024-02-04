@@ -6,29 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .pinkBorder {
-            outline: 1px solid pink;
+
+        img{
+            border: 1px solid black; 
         }
+
+        .list{
+            margin: 100px auto; 
+        }
+      
     </style>
 </head>
 <body>
 
-    <input type='text' class='input' placeholder="信箱/ID/手機密碼">
+    <div class = list>
+        <img src = p1.png height = 200px;>
+        <img src = p2.png height = 200px;>
+    </div>
+    
 
     <script>
-        var input = document.getElementsByClassName('input');
+        var button = document.getElementsByTagName('img');
+        var back = document.getElementsByClassName('list');
 
-        input[0].onfocus = function () {
-            input[0].placeholder = ' ';
-            input[0].classList.add('pinkBorder');
-        }
-
-        input[0].onblur = function () {
-            if (input[0].placeholder == '') {
-                input[0].placeholder = '信箱/ID/手機密碼';
-                input[0].classList.remove('pinkBorder');
+        for(var i = 0; i< button.length; i++){
+            button[i].onclick = function(){
+                document.body.style.backgroundImage = 'url('+this.src +')';
             }
         }
+
     </script>
 </body>
 </html>
