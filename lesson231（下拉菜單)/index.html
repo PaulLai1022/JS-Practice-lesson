@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            list-style: none;
+        }
+
+        .nav{
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .nav>li>a{
+            margin-right: 20px;
+        }
+
+        .nav>li>a:hover{
+            background-color: yellow; 
+        }
+
+        .nav ul{
+            display: none; 
+        }
+
+        
+      
+    </style>
+</head>
+<body>
+    <ul class = 'nav'>
+        <li>
+            <a href = '#'>facebook</a>
+            <ul>
+                <li>
+                    <a href = ''>留言</a>
+                </li>
+                <li>
+                    <a href = ''>我自己</a>
+                </li>
+                <li>
+                    <a href = ''>@我</a>
+                </li> 
+                
+            </ul>
+        </li>
+        <li> 
+
+            <a href = '#'>facebook</a>
+            <ul>
+                <li>
+                    <a href = ''>留言</a>
+                </li>
+                <li>
+                    <a href = ''>我自己</a>
+                </li>
+                <li>
+                    <a href = ''>@我</a>
+                </li> 
+                
+            </ul>
+        </li>
+        <li>
+            <a href = '#'>facebook</a>
+            <ul>
+                <li>
+                    <a href = ''>留言</a>
+                </li>
+                <li>
+                    <a href = ''>我自己</a>
+                </li>
+                <li>
+                    <a href = ''>@我</a>
+                </li> 
+                
+            </ul>
+        </li>
+    </ul>
+
+
+    <script>
+        var nav = document.querySelector('.nav');
+        var lisTitle = nav.children; 
+        
+        for(var i = 0; i< lisTitle.length; i++){
+            lisTitle[i].onmouseover = function(){
+                this.children[1].style.display = 'block';
+            }
+            lisTitle[i].onmouseout = function(){
+                this.children[1].style.display = 'none';
+            }
+        }
+       
+    </script>
+</body>
+</html> 
