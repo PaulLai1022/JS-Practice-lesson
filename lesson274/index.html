@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: gray;
+        }
+
+
+        h1{
+            display: flex; 
+            color: white;
+            height: 300px;
+            width: 500px;
+            align-items: center;
+            justify-content: center;
+
+            
+        }
+
+        h1::before{
+            content:'SHADOW';
+            color: black;
+            transform: translate(135px, 4px) scaleY(0.7) skew(50deg);
+            z-index: -10;
+            filter: blur(1px);
+            mask: linear-gradient(transparent, black);
+           
+            
+
+        }
+
+    
+    </style>
+</head>
+<body>
+    <h1>SHADOW</h1>
+
+    <script>
+    
+    </script>
+</body>
+</html> 
